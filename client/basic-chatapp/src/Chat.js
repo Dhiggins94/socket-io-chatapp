@@ -29,7 +29,7 @@ function Chat({ socket, username, room }) {
   setMessageList((list) => [...list, data]);
     });
     // we're grabbing the current(previous) state of the message(list) then we add the new event/message that comes in (data)
-    // if its just socket.on(recieve_message) it will start doing sending double text
+    // if its just socket.on(recieve_message) it will start doing sending double text. socket.off allows the specific listeiner from the listner array (recieve message) to be remove. then flicks on receive message to turn it back on
   }, [socket]);
   return (
     <div className="chat-window">
