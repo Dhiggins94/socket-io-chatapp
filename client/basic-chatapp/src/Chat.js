@@ -38,7 +38,7 @@ function Chat({ socket, username, room }) {
       </div>
 
       <div className="chat-body">
-      <ScrollToBottom>
+      <ScrollToBottom className="message-container">
         {messageList.map((messageContent,id) => {
           return (   
             <div
